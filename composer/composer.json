@@ -1,0 +1,48 @@
+{
+    "name": "cviniciussdias/buscador-cursos",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Vinicius Dias",
+            "email": "carlosv775@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "squizlabs/php_codesniffer": "*",
+        "phan/phan": "^5.4"
+    },
+    "scripts": {
+        "tests": "phpunit tests/TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "limpa-cache": "del cache",
+        "ls": "dir",
+        "check": [
+            "@phan",
+            "@cs",
+            "@tests"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "tests": "Executa os testes unitários",
+        "cs": "Executa o PHP CodeSniffer para verificar a formatação do código",
+        "phan": "Executa o Phan para realizar análise estática do código",
+        "check": "Executa todos os scripts de verificação"
+    }
+
+}
