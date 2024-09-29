@@ -14,6 +14,9 @@
         "symfony/css-selector": "^4.2"
     },
     "autoload": {
+        "files": [
+            "functions.php"
+        ],
         "psr-4": {
             "Alura\\BuscadorDeCursos\\": "src/"
         }
@@ -43,6 +46,10 @@
         "cs": "Executa o PHP CodeSniffer para verificar a formatação do código",
         "phan": "Executa o Phan para realizar análise estática do código",
         "check": "Executa todos os scripts de verificação"
-    }
+    },
+    "license": "GPL-3.0",
+    "bin": [
+        "buscador-cursos.php"
+    ]
 
 }
